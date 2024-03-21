@@ -1,0 +1,62 @@
+@import url(../header/header.css);
+@import url(../main/main.css);
+@import url(../footer/footer.css);
+
+.wrap {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.space-bw {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between !important;
+}
+
+/* 기본 (데스크탑 PC) 레이아웃 */
+/* 타블렛 PC 레이아웃 */
+@media screen and (max-width: 1170px) {
+  .inner {
+    padding: 0 1.5rem;
+  }
+}
+/* 모바일 PC 레이아웃 */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 1.5rem 0;
+  }
+  .gnb {
+    display: block;
+    align-items: inherit;
+  }
+  .gnb .nav {
+    position: fixed;
+    top: calc(6rem + 2px);
+    left: 0;
+    width: 100%;
+    gap: 1.5rem;
+    flex-direction: column;
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    padding: 0 5%;
+    transition: 0.3s;
+  }
+  .active .gnb .nav {
+    height: auto;
+    padding: 1.5rem 5% 3rem;
+  }
+  .gnb .hd-icon {
+    gap: 1.2rem;
+  }
+  .mb-more {
+    display: block;
+  }
+}

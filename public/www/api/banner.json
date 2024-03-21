@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "link": "#",
+    "imgpath": "b1.png",
+    "text": "카카오브레인의\n 연구화"
+  },
+  {
+    "id": 2,
+    "link": "#",
+    "imgpath": "b2.png",
+    "text": "PathFinder 2기의\n 언어모델 활용기"
+  },
+  {
+    "id": 3,
+    "link": "#",
+    "imgpath": "b3.png",
+    "text": "칼로의 꿈\n 시리즈 ③"
+  },
+  {
+    "id": 4,
+    "link": "#",
+    "imgpath": "b4.png",
+    "text": "PathFinder 2기의\n 언어모델 활용기"
+  }
+]

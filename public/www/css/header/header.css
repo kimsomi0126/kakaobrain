@@ -1,0 +1,116 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 2.2rem 0;
+  z-index: 999;
+  background: #fff;
+  transition: 0.2s;
+  border-bottom: 1px solid transparent;
+}
+.hd-line {
+  border-color: #e6e5e6;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo img {
+  height: 2.2rem;
+}
+.logo .swLogo {
+  width: 5rem;
+}
+.logo .swLogo img {
+  height: 3.1rem;
+  margin-left: 0.5rem;
+}
+.swLogo .swiper-slide {
+  background: #fff;
+}
+
+.gnb {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+.gnb ul {
+  display: flex;
+  gap: 3rem;
+  font-weight: 600;
+}
+.gnb a {
+  display: block;
+}
+.gnb a:hover {
+  color: #001eff;
+}
+
+/* 메뉴 아이콘 */
+.icon-bt {
+  position: relative;
+  display: block;
+  font-size: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon-bt:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.icon-search:after {
+  background: url(../../images/icon/icon-search.png) no-repeat center/100%;
+}
+
+.icon-more:after {
+  display: none;
+  background: url(../../images/icon/icon-hbr.png) no-repeat center/100%;
+}
+.icon-more {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 0.5rem 0.2rem;
+}
+.icon-more span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #222;
+  transition: 0.3s;
+}
+.active .icon-more span:nth-last-of-type(1) {
+  transform: translate(0%, -290%) rotate(45deg);
+}
+.active .icon-more span:nth-last-of-type(3) {
+  transform: translate(0%, 290%) rotate(-45deg);
+}
+.active .icon-more span:nth-last-of-type(2) {
+  opacity: 0;
+}
+
+.mb-more {
+  display: none;
+}
+
+.mobile-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: -999;
+  transition: 0.3s;
+}
+
+.mobile-bg.active {
+  opacity: 1;
+  z-index: 9;
+}

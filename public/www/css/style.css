@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* font : Inter, Noto Sans Kr */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline-style: none;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+html {
+  position: relative;
+  font-size: 62.5%;
+  font-family: "Inter", "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+  word-break: keep-all;
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  font-size: 1.6rem;
+}
+
+button {
+  border: 0;
+  background: transparent;
+}

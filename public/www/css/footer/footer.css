@@ -1,0 +1,98 @@
+.footer {
+  min-height: 6rem;
+  color: #999;
+  font-size: 1.4rem;
+}
+.footer b {
+  color: #fff;
+}
+.footer a {
+  color: #999;
+  transition: 0.2s;
+}
+.ft-logo img {
+  height: 2rem;
+}
+.ft-top {
+  padding: 4rem 0;
+  background: #1e1e1e;
+  display: flex;
+}
+.ft-info-txt {
+  margin: 3rem 0 4rem;
+}
+.ft-info .ft-info-link {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: #ffc600;
+  color: #222;
+  font-weight: 600;
+  border-radius: 10rem;
+}
+
+.ft-link {
+  gap: 10rem;
+}
+.ft-link i {
+  transform: translate(-20%, -20%) rotate(45deg);
+  font-weight: 600;
+}
+.ft-link b {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 3rem;
+}
+.ft-link li {
+  margin-bottom: 2rem;
+}
+.ft-link li:last-child {
+  margin-bottom: 0;
+}
+.ft-bot {
+  background: #191919;
+}
+.ft-bot .inner {
+  height: 10rem;
+  align-items: center;
+}
+.ft-copy {
+  color: #666;
+}
+.ft-sns {
+  display: flex;
+  font-size: 2.4rem;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ft-sns a:hover {
+  color: #fff;
+}
+
+/* 모바일 PC 레이아웃 */
+@media screen and (max-width: 1024px) {
+  .ft-info {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .ft-info br {
+    display: none;
+  }
+  .ft-link {
+    width: 100%;
+    gap: 0;
+  }
+  .ft-link ul {
+    width: 50%;
+  }
+  .ft-bot {
+    padding: 3rem 0;
+  }
+  .ft-bot .inner {
+    height: auto;
+  }
+  .ft-copy {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
