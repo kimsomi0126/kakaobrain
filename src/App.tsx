@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+"use client";
+// import "./App.css";
+import "./css/normalize.css";
+import "./css/style.css";
+import "./css/common/common.css";
 
-function App() {
+import Main from "./pages/Main";
+import Layout from "./layouts/Layout";
+// 컴포넌트 (즉, JSX 뽑기)
+
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="wrap">
+        <Layout>
+          <Main />
+        </Layout>
+      </div>
+    </>
   );
 }
 

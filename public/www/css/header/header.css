@@ -3,114 +3,150 @@
   left: 0;
   top: 0;
   width: 100%;
-  padding: 2.2rem 0;
-  z-index: 999;
-  background: #fff;
-  transition: 0.2s;
-  border-bottom: 1px solid transparent;
+  height: 70px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(230, 229, 230, 0);
+  transition: border 0.3s;
+  z-index: 9999999999;
 }
-.hd-line {
-  border-color: #e6e5e6;
+.header-b-line {
+  border-bottom: 1px solid rgba(230, 229, 230, 1);
 }
+
 .logo {
   display: flex;
+  width: 168px;
+  height: 31px;
   align-items: center;
 }
-.logo img {
-  height: 2.2rem;
+.logo-kakao {
+  width: 88px;
+  height: 22px;
+  margin-right: auto;
 }
-.logo .swLogo {
-  width: 5rem;
-}
-.logo .swLogo img {
-  height: 3.1rem;
-  margin-left: 0.5rem;
+
+/* 로고 Swiper 작업 */
+.swLogo {
+  width: 68px;
+  height: 31px;
 }
 .swLogo .swiper-slide {
   background: #fff;
 }
+.swLogo .swiper-slide img {
+  width: 100%;
+  height: auto;
+}
 
-.gnb {
+.nav {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 20px;
 }
-.gnb ul {
-  display: flex;
-  gap: 3rem;
+
+.nav a {
+  display: block;
   font-weight: 600;
-}
-.gnb a {
-  display: block;
-}
-.gnb a:hover {
-  color: #001eff;
+  font-size: 1rem;
 }
 
-/* 메뉴 아이콘 */
+.nav a:hover {
+  color: rgb(0 30 255);
+}
+/* 메뉴의 아이콘 버튼 */
 .icon-bt {
-  position: relative;
-  display: block;
-  font-size: 0;
-  width: 2.4rem;
-  height: 2.4rem;
+  font-size: 0 !important;
+  width: 24px;
+  height: 24px;
 }
-
-.icon-bt:after {
+.icon-bt::before {
   content: "";
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-}
-
-.icon-search:after {
-  background: url(../../images/icon/icon-search.png) no-repeat center/100%;
-}
-
-.icon-more:after {
-  display: none;
-  background: url(../../images/icon/icon-hbr.png) no-repeat center/100%;
-}
-.icon-more {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  padding: 0.5rem 0.2rem;
-}
-.icon-more span {
   display: block;
-  width: 100%;
-  height: 2px;
-  background: #222;
-  transition: 0.3s;
+  width: 24px;
+  height: 24px;
 }
-.active .icon-more span:nth-last-of-type(1) {
-  transform: translate(0%, -290%) rotate(45deg);
+.icon-search::before {
+  background: url("../../images/icon/icon-search.png") no-repeat center;
+  background-size: contain;
 }
-.active .icon-more span:nth-last-of-type(3) {
-  transform: translate(0%, 290%) rotate(-45deg);
+.icon-more::before {
+  background: url("../../images/icon/icon-hbr.png") no-repeat center;
+  background-size: contain;
 }
-.active .icon-more span:nth-last-of-type(2) {
-  opacity: 0;
+/* 닫기 버튼 */
+.icon-more.active::before {
+  background: url("../../images/icon/icon-close.png") no-repeat center;
+  background-size: contain;
 }
 
+/* PC 버전 숨김 */
 .mb-more {
   display: none;
 }
 
-.mobile-bg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  z-index: -999;
-  transition: 0.3s;
+/* 모바일 PC 레이아웃 */
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 60px;
+  }
+  .nav {
+    gap: 15px;
+  }
+  .nav li {
+    display: none;
+  }
+  .mb-search {
+    display: block !important;
+  }
+  .mb-more {
+    display: block !important;
+  }
 }
 
-.mobile-bg.active {
+/* 모바일 메뉴 */
+.mb-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -9999999px;
+  opacity: 0;
+  /* top: 60px; */
+  z-index: 9998;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 0.2s;
+}
+.mb-menu.active {
+  top: 60px;
   opacity: 1;
-  z-index: 9;
+}
+
+.mb-inner {
+  max-width: 100%;
+  background: #fff;
+  margin: 0 auto;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+.mb-inner.active {
+  height: 175px;
+}
+
+.mb-nav {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 15px;
+  padding-top: 30px;
+}
+.mb-nav a {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.mb-nav a:hover {
+  color: rgb(0 30 255);
+}
+.mb-nav li {
+  padding: 5px 0px;
 }
